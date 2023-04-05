@@ -10,29 +10,52 @@ body {
   background-blend-mode: hard-light;
 }
 
-main {
-  color: white;
+.container {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 200px 0;
+  text-align: center;
+}
+
+main {
+  color: white;
+  width: 100%;
 }
 
 img.logo {
-  width: 200px;
-  height: 100%;
-  align-self: center;
+  width: 25%;
+  height: auto;
+  padding-top: 2rem;
 }
-
 
 h2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.875rem;
   font-weight: 300;
   line-height: 32px;
-  text-align: center;
+  padding: 0.5rem 1rem 4.5rem 1rem;
+}
+
+p {
+  font-family: "Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5625;
+  margin-bottom: 15px;
+  padding: 0 1.5rem;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.start-icon {
+  width: 80px;
+  height: 80px;
+  filter: brightness(0) invert(1);
+}
+
+.start-button {
+  all: unset;
+  cursor: pointer
 }
