@@ -32,7 +32,7 @@ h2 {
   font-size: 1.875rem;
   font-weight: 300;
   line-height: 32px;
-  padding: 0.5rem 1rem 4.5rem 1rem;
+  padding: 0.5rem 1rem 0 1rem;
 }
 
 p {
@@ -40,22 +40,5 @@ p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5625;
-  margin-bottom: 15px;
   padding: 0 1.5rem;
-}
-
-#map {
-  height: 400px;
-  width: 100%;
-}
-
-.start-icon {
-  width: 80px;
-  height: 80px;
-  filter: brightness(0) invert(1);
-}
-
-.start-button {
-  all: unset;
-  cursor: pointer
 }
