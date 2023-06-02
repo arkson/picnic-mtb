@@ -32,7 +32,7 @@ main {
 img.logo {
   width: 25%;
   height: auto;
-  padding-top: $spacing-8;
+  padding-top: $spacing-2;
 }
 
 h2 {
@@ -58,8 +58,13 @@ p, a {
 
 .search-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: $spacing-6;
+
+  label {
+    width: 100%;
+  }
 }
 
 .search-field {
@@ -129,7 +134,7 @@ p, a {
   text-decoration: none;
 }
 
-footer{
+footer {
   min-height: $spacing-12;
   flex-shrink: $spacing-0;
   display: flex;
@@ -139,37 +144,44 @@ footer{
   :is(a) {
     padding: $spacing-0 $spacing-6;
   }
+  :visited {
+    color: $white;
+  }
+  :link {
+    text-decoration: none;
+  }
+
+  .language-container {
+    padding: $spacing-0 $spacing-6;
+
+    :is(button).button{
+      width: 2rem;
+      height: 2rem;
+      margin: .25rem;
+      filter: grayscale(0.5) sepia(0.5) contrast(1.2);
+      background-size:145%;
+      background-position:center;
+      border-radius:50%;
+      border-color:transparent;
+      transition: all 100ms ease-in-out;
+    }
+    .button:hover {
+      background-size:120%;
+      filter: grayscale(10%) sepia(10%);
+    }
+    .button:focus span{
+      color: transparent;
+    }
+    .button.en{
+      background-image:url("/en.svg");
+    }
+    .button.es{
+      background-image:url("/es.svg");
+    }
+    :is(span) {
+      color: $dark-gray;
+      font-weight: 600;
+    }
+  }
 }
 
-.language-container {
-  padding: $spacing-0 $spacing-6;
-
-  :is(button).button{
-    width: 2rem;
-    height: 2rem;
-    margin: .25rem;
-    filter: grayscale(0.5) sepia(0.5) contrast(1.2);
-    background-size:400%;
-    background-position:center;
-    border-radius:50%;
-    border-color:transparent;
-    transition: all 100ms ease-in-out;
-  }
-  .button:hover {
-    background-size:120%;
-    filter: grayscale(10%) sepia(10%);
-  }
-  .button:focus span{
-    color: transparent;
-  }
-  .button.en{
-    background-image:url("/en.svg");
-  }
-  .button.es{
-    background-image:url("/es.svg");
-  }
-  :is(span) {
-    color: $dark-gray;
-    font-weight: 600;
-  }
-}
