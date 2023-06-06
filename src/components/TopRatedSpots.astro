@@ -1,44 +1,24 @@
+---
+import { PLACES } from '../constants';
+---
+
 <h6>Top rated spots to ride</h6>
 <div class="grid-container">
-    <a href="#" class="grid-item">
-        <img src="/icalma.png" alt="Icalma" class="thumbnail">
-        <h3 class="title">Icalma</h3>
-        <div class="description">
-            <p>Lonquimay, 🇨🇱</p>
-            <p>
-                <span class="material-symbols-outlined">bed</span>
-                <span class="material-symbols-outlined">outdoor_grill</span>
-                <span class="material-symbols-outlined">local_cafe</span>
-                <span class="material-symbols-outlined">kayaking</span>
-            </p>
-        </div>
+  {PLACES.map((place) =>
+    <a href={place.postUrl} class="grid-item">
+      <img src={place.imageUrl} alt={place.title} class="thumbnail">
+      <h3 class="title">{place.title}</h3>
+      <div class="description">
+        <p>{place.location}</p>
+        <p>
+          {place.amenities.map((amenity) =>
+              <span class="material-symbols-outlined" id={amenity}>{amenity}</span>
+          )}
+        </p>
+      </div>
     </a>
-    <a href="#" class="grid-item">
-        <img src="/chillan.jpeg" alt="Photo 2" class="thumbnail">
-        <h3 class="title">Bikepark Nevados de Chillán</h3>
-        <div class="description">
-            <p>Pinto, 🇨🇱</p>
-            <p>
-                <span class="material-symbols-outlined">bed</span>
-                <span class="material-symbols-outlined">park</span>
-                <span class="material-symbols-outlined">restaurant</span>
-            </p>
-        </div>
-    </a>
-    <a href="#" class="grid-item">
-        <img src="/villa-angostura.jpeg" alt="Photo 3" class="thumbnail">
-        <h3 class="title">Cerro Bayo</h3>
-        <div class="description">
-            <p>Villa La Angostura, 🇦🇷</p>
-            <p>
-                <span class="material-symbols-outlined">bed</span>
-                <span class="material-symbols-outlined">park</span>
-                <span class="material-symbols-outlined">restaurant</span>
-                <span class="material-symbols-outlined">local_gas_station</span>
-            </p>
-        </div>
-    </a>
-    <a href="#" class="find-more">
-        Find more spots here
-    </a>
+  )}
+  <a href="#" class="find-more">
+    Find more spots here
+  </a>
 </div>
