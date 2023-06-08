@@ -1,32 +1,15 @@
 ---
-import '../styles/styles.scss';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import SearchField from '../components/SearchField.astro';
 import TopRatedSpots from '../components/TopRatedSpots.astro';
-import { SITE_TITLE, SITE_DESCRIPTION, SITE_SUBTITLE } from '../constants';
+import { HOME_PAGE_TITLE, HOME_PAGE_DESCRIPTION, HOME_PAGE_SUBTITLE } from '../constants';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{SITE_TITLE}</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  </head>
-  <body>
-    <div class="container">
-      <Header />
-      <main>
-        <h2>{SITE_DESCRIPTION}</h2>
-        <p>
-          {SITE_SUBTITLE}
-        </p>
-        <SearchField />
-        <TopRatedSpots />
-      </main>
-      <Footer />
-    </div>
-  </body>
-</html>
+<BaseLayout pageTitle={HOME_PAGE_TITLE}>
+  <h2>{HOME_PAGE_DESCRIPTION}</h2>
+  <p>
+    {HOME_PAGE_SUBTITLE}
+  </p>
+  <SearchField />
+  <TopRatedSpots />
+</BaseLayout>

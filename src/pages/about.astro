@@ -1,65 +1,44 @@
 ---
-import '../styles/styles.scss';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { ABOUT_TITLE } from '../constants';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset ="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{ABOUT_TITLE}</title>
-  </head>
-  <body>
-    <div class="container">
-      <Header />
-      <main>
-        <h2>{ABOUT_TITLE}</h2>
-        <section>
-          <p>
-            We are a community oriented to share experiences on mountain biking in different parts of Latin America and
-            the rest of the world.
-          </p>
-        </section>
-
-        <section>
-          <p>
-            Our mission is to be able to give visibility to different spots to ride your mountain bike and offer tourist
-            options within local communities.
-            We strive to build lasting relationships based on trust and mutual growth.
-          </p>
-        </section>
-
-        <section>
-          <p>
-            The information found on Picnic MTB is crowd sourced, contributed by passionate riders excited to share their
-            knowledge of the local trails with others. anyone can share their experiences.
-          </p>
-          <p>
-            At Picnic MTB, we want to showcase the best places to enjoy on & off of your bike, share with
-            friends or make new ones and have a cup of coffee or enjoy a good beer.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  </body>
-</html>
+<BaseLayout pageTitle={ABOUT_TITLE}>
+  <h2>{ABOUT_TITLE}</h2>
+  <div class="about-description">
+    <section>
+      <p>
+        We are a community oriented to share experiences on mountain biking in different parts of Latin America and
+        the rest of the world.
+      </p>
+    </section>
+    <section>
+      <p>
+        Our mission is to be able to give visibility to different spots to ride your mountain bike and offer tourist
+        options within local communities.
+        We strive to build lasting relationships based on trust and mutual growth.
+      </p>
+    </section>
+    <section>
+      <p>
+        The information found on Picnic MTB is crowd sourced, contributed by passionate riders excited to share their
+        knowledge of the local trails with others. anyone can share their experiences.
+      </p>
+      <p>
+        At Picnic MTB, we want to showcase the best places to enjoy on & off of your bike, share with
+        friends or make new ones and have a cup of coffee or enjoy a good beer.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
 
 <style lang="scss">
-
-    .container {
-        main {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          p{
-              padding: .5rem 2rem;
-              text-align: justify;
-              overflow-wrap: break-word;
-              word-break: break-word;
-          }
-        }
+  .about-description {
+    p{
+        padding: .5rem 2rem;
+        text-align: justify;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
+  }
 </style>
