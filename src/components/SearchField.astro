@@ -7,3 +7,31 @@
     </span>
   </button>
 </div>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  .search-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: $spacing-6;
+
+    label {
+      width: 100%;
+    }
+  }
+
+  .search-field {
+    flex: 1;
+    padding: $spacing-2;
+    border: $spacing-px solid $light-gray;
+  }
+
+  .search-button {
+    background-color: $cyan;
+    color: $white;
+    border: none;
+    cursor: pointer;
+  }
+</style>

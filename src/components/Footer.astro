@@ -1,14 +1,69 @@
 <footer>
-    <a href="/about/">About</a>
-    <span>|</span>
-    <a>Contact</a>
-    <span>|</span>
-    <div class="language-container">
-        <button class="button es is-large">
-            <span></span>
-        </button>
-        <button class="button en is-large has-text-white">
-            <span></span>
-        </button>
-    </div>
+  <a href="/about/">About</a>
+  <span>|</span>
+  <a>Contact</a>
+  <span>|</span>
+  <div class="language-container">
+    <button class="button es is-large">
+      <span></span>
+    </button>
+    <button class="button en is-large has-text-white">
+      <span></span>
+    </button>
+  </div>
 </footer>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  footer {
+    min-height: $spacing-12;
+    flex-shrink: $spacing-0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+  :is(a) {
+    padding: $spacing-0 $spacing-6;
+  }
+  :visited {
+    color: $white;
+  }
+  :link {
+    text-decoration: none;
+  }
+
+    .language-container {
+      padding: $spacing-0 $spacing-6;
+
+      :is(button).button{
+        width: 2rem;
+        height: 2rem;
+        margin: .25rem;
+        filter: grayscale(0.5) sepia(0.5) contrast(1.2);
+        background-size:145%;
+        background-position:center;
+        border-radius:50%;
+        border-color:transparent;
+        transition: all 100ms ease-in-out;
+      }
+      .button:hover {
+        background-size:120%;
+        filter: grayscale(10%) sepia(10%);
+      }
+      .button:focus span{
+        color: transparent;
+      }
+      .button.en{
+        background-image:url("/en.svg");
+      }
+      .button.es{
+        background-image:url("/es.svg");
+      }
+      :is(span) {
+        color: $dark-gray;
+        font-weight: 600;
+      }
+    }
+  }
+</style>
