@@ -1,24 +1,22 @@
 ---
-import { PLACES } from '../constants';
+import BlogPost from "./BlogPost.astro";
+const { allPosts } = Astro.props;
 ---
 
 <h6>Top rated spots to ride</h6>
-<div class="grid-container">
-  {PLACES.map((place) =>
-    <a href={place.postUrl} class="grid-item">
-      <img src={place.imageUrl} alt={place.title} class="thumbnail">
-      <h3 class="title">{place.title}</h3>
-      <div class="description">
-        <p>{place.location}</p>
-        <p>
-          {place.amenities.map((amenity) =>
-              <span class="material-symbols-outlined" id={amenity}>{amenity}</span>
-          )}
-        </p>
-      </div>
-    </a>
+<div>
+  <ul>
+  {allPosts.map((post) =>
+    <BlogPost
+      url={post.url}
+      title={post.frontmatter.title}
+      image={post.frontmatter.image}
+      location={post.frontmatter.location}
+      amenities={post.frontmatter.amenities}
+    />
   )}
-  <a href="#" class="find-more">
+  </ul>
+  <a href="#">
     Find more spots here
   </a>
 </div>
@@ -26,56 +24,19 @@ import { PLACES } from '../constants';
 <style lang="scss">
   @import "../styles/variables.scss";
 
-  .grid-container {
+  div {
     display: flex;
     flex-direction: column;
     margin: $spacing-6;
-  }
 
-  .grid-item {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    background-color: $white;
-    padding: $spacing-0;
-    margin-bottom: $spacing-4;
-
-    .description {
-      display: flex;
-      justify-content: space-between;
-      padding: $spacing-0 $spacing-4;
-      font-size: $spacing-4;
-      text-align: left;
-      color: $dark-gray;
-
-      :is(p) {
-        padding: $spacing-0;
-      }
-
-      :is(span) {
-        color: $dark-gray;
-        align-self: center;
-      }
+    & ul {
+      list-style: none;
+      padding: 0;
     }
-  }
 
-  .thumbnail {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-
-  .title {
-    margin-top: $spacing-2;
-    margin-bottom: $spacing-0;
-    font-size: $spacing-5;
-    text-align: left;
-    padding-left: $spacing-4;
-    color: $dark-gray;
-  }
-
-  .find-more{
-    color: $white;
-    text-decoration: none;
+    & a {
+      color: $white;
+      text-decoration: none;
+    }
   }
 </style>
