@@ -1,0 +1,63 @@
+---
+const { url, image, title, location, amenities } = Astro.props;
+---
+
+<li>
+  <a href={url}>
+    <img src={image} alt={title}>
+    <h3>{title}</h3>
+    <div>
+      <p>{location}</p>
+      <p>
+        {amenities.map((amenity) =>
+            <span class="material-symbols-outlined" id={amenity}>{amenity}</span>
+        )}
+      </p>
+    </div>
+  </a>
+</li>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: $white;
+    margin-bottom: $spacing-4;
+
+    & div {
+      display: flex;
+      justify-content: space-between;
+      padding: $spacing-0 $spacing-4;
+      font-size: $spacing-4;
+      text-align: left;
+      color: $dark-gray;
+
+      :is(p) {
+          padding: $spacing-0;
+      }
+
+      :is(span) {
+          color: $dark-gray;
+          align-self: center;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  h3 {
+    margin-top: $spacing-2;
+    margin-bottom: $spacing-0;
+    font-size: $spacing-5;
+    text-align: left;
+    padding-left: $spacing-4;
+    color: $dark-gray;
+  }
+</style>
