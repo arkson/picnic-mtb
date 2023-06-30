@@ -1,8 +1,9 @@
+---
+import ThemeIcon from "./ThemeIcon.astro";
+---
 <footer>
   <a href="/about/">About</a>
-  <span>|</span>
-  <a>Contact</a>
-  <span>|</span>
+  <a href="#">Contact</a>
   <div class="language-container">
     <button class="button es is-large">
       <span></span>
@@ -11,6 +12,7 @@
       <span></span>
     </button>
   </div>
+  <ThemeIcon />
 </footer>
 
 <style lang="scss">
@@ -65,5 +67,10 @@
         font-weight: 600;
       }
     }
+  }
+
+  body.dark {
+      background-color: #0d0950;
+      color: #fff;
   }
 </style>
