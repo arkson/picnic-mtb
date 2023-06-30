@@ -8,7 +8,7 @@ description: 'This is the first post of my new Astro blog.'
 author: 'Astro Learner'
 url: 'https://docs.astro.build/assets/full-logo-light.png'
 alt: 'The full Astro logo.'
-tags: ["destination", "south america", "adventure"]
+tags: ["destination", "south america", "adventure", "chile"]
 layout: ../../layouts/MarkdownPostLayout.astro
 ---
 ---

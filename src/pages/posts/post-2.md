@@ -8,7 +8,7 @@ description: "After learning some Astro, I couldn't stop!"
 url: "https://docs.astro.build/assets/arc.webp"
 alt: "Thumbnail of Astro arcs,"
 pubDate: 2022-07-08
-tags: ["bike park", "destination", "south america", "adventure"]
+tags: ["bike park", "destination", "south america", "adventure", "chile"]
 layout: ../../layouts/MarkdownPostLayout.astro
 ---
 
