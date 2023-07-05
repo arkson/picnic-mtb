@@ -1,16 +1,16 @@
 ---
 title: 'Icalma'
 location: 'Lonquimay, 🇨🇱'
-image: '/icalma.png'
+image: {
+  url: '/icalma.png',
+  alt: 'Icalma'
+}
 amenities: ["bed", "outdoor_grill", "local_cafe", "kayaking"]
 pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
 author: 'Astro Learner'
 url: 'https://docs.astro.build/assets/full-logo-light.png'
-alt: 'The full Astro logo.'
 tags: ["destination", "south america", "adventure", "chile"]
-layout: ../../layouts/MarkdownPostLayout.astro
----
 ---
 # My First Blog Post
 

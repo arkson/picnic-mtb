@@ -4,7 +4,7 @@ const { url, image, title, location, amenities } = Astro.props;
 
 <li>
   <a href={url}>
-    <img src={image} alt={title}>
+    <img src={image.url} alt={title}>
     <h3>{title}</h3>
     <div>
       <p>{location}</p>

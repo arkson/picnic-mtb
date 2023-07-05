@@ -2,9 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SearchField from '../components/SearchField.astro';
 import TopRatedSpots from '../components/TopRatedSpots.astro';
+import { getCollection } from "astro:content";
 import { HOME_PAGE_TITLE, HOME_PAGE_DESCRIPTION, HOME_PAGE_SUBTITLE } from '../constants';
 
-const allPosts = await Astro.glob('./posts/*.md');
+const allPosts = await getCollection("posts");
 ---
 
 <BaseLayout pageTitle={HOME_PAGE_TITLE}>
