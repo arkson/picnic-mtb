@@ -1,0 +1,39 @@
+<div>
+  <a href="#">top</a>
+</div>
+
+<style lang="scss">
+    @import "../styles/variables.scss";
+
+    div {
+      --offset: 100px;
+      --fade: 80px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      -webkit-mask:linear-gradient(#0000 calc(100vh + var(--offset)),#000 calc(100vh + var(--offset) + var(--fade)));
+
+      a {
+        position: sticky;
+        top: 89vh;
+        cursor: pointer;
+        font-size: $spacing-5;
+        margin-right: $spacing-4;
+        width: 100%;
+        aspect-ratio: 1;
+        background: $orange;
+        border-radius: 4px;
+        color: transparent;
+      }
+
+      a:before {
+        content: "";
+        position: absolute;
+        inset: 30%;
+        transform: translateY(20%) rotate(-45deg);
+        border-top: 4px solid $white;
+        border-right: 4px solid $white;
+      }
+    }
+</style>

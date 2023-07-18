@@ -2,6 +2,7 @@
 import '../styles/styles.scss';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ScrollContainer from "../components/ScrollContainer.astro";
 const { pageTitle } = Astro.props;
 ---
 
@@ -19,12 +20,17 @@ const { pageTitle } = Astro.props;
   <main>
     <slot />
   </main>
+  <ScrollContainer />
   <Footer />
 </div>
 </body>
 
 <style lang="scss">
   @import "../styles/variables.scss";
+  body {
+    position: relative;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
