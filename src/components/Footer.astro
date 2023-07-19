@@ -5,11 +5,21 @@ import ThemeIcon from "./ThemeIcon.astro";
   <a href="/about/">About</a>
   <a href="/contact/">Contact</a>
   <div class="language-container">
-    <button class="button es is-large">
-      <span></span>
+    <button>
+      <span>EN</span>
+      <img
+          src="https://flagcdn.com/us.svg"
+          width="30"
+          height="20"
+          alt="Usa">
     </button>
-    <button class="button en is-large has-text-white">
-      <span></span>
+    <button>
+      <span>ES</span>
+      <img
+          src="https://flagcdn.com/es.svg"
+          width="30"
+          height="20"
+          alt="Spain">
     </button>
   </div>
   <ThemeIcon />
@@ -25,46 +35,31 @@ import ThemeIcon from "./ThemeIcon.astro";
     justify-content: center;
     align-items: center;
     color: $white;
-  :is(a) {
-    padding: $spacing-0 $spacing-6;
-  }
-  :visited {
-    color: $white;
-  }
-  :link {
-    text-decoration: none;
-    color: $white;
-  }
+
+    :is(a) {
+      padding: $spacing-0 $spacing-6;
+    }
+    :visited {
+      color: $white;
+    }
+    :link {
+      text-decoration: none;
+      color: $white;
+    }
 
     .language-container {
-      padding: $spacing-0 $spacing-6;
+      display: flex;
+      flex-direction: row;
 
-      :is(button).button{
-        width: 2rem;
-        height: 2rem;
-        margin: .25rem;
-        filter: grayscale(0.5) sepia(0.5) contrast(1.2);
-        background-size:145%;
-        background-position:center;
-        border-radius:50%;
-        border-color:transparent;
-        transition: all 100ms ease-in-out;
-      }
-      .button:hover {
-        background-size:120%;
-        filter: grayscale(10%) sepia(10%);
-      }
-      .button:focus span{
-        color: transparent;
-      }
-      .button.en{
-        background-image:url("/en.svg");
-      }
-      .button.es{
-        background-image:url("/es.svg");
+      :is(button) {
+        display: flex;
+        flex-flow: row-reverse;
+        background: none;
+        border: none;
+        align-items: center;
       }
       :is(span) {
-        color: $dark-gray;
+        color: $white;
         font-weight: 600;
       }
     }
