@@ -19,7 +19,10 @@ const { url, image, title, location, amenities } = Astro.props;
 
 <style lang="scss">
   @import "../styles/variables.scss";
-
+  li {
+    border-radius: $rounded-border;
+    opacity: $bg-transparency;
+  }
   a {
     display: flex;
     flex-direction: column;
