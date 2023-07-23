@@ -1,36 +1,23 @@
-//div {
-//  display: flex;
-//  flex-wrap: wrap;
-//  margin: 0 auto;
-//
-//  & p {
-//    margin: 0.25em;
-//    border: dotted 1px #a1a1a1;
-//    border-radius: .5em;
-//    padding: .5em 1em;
-//    font-size: 1.15em;
-//    background-color: #F8FCFD;
-//  }
-//
-//  & a {
-//    color: #00539F;
-//  }
-//}
-a {
-  color: #00539F;
-}
+@import "variables.scss";
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
-}
+  justify-content: start;
+  row-gap: $spacing-2;
 
-.tag {
-  margin: 0.25em;
-  border: dotted 1px #a1a1a1;
-  border-radius: .5em;
-  padding: .5em 1em;
-  font-size: 1.15em;
-  background-color: #F8FCFD;
+  & p {
+    margin: 0 2px;
+    padding: 4px 10px;
+    font-size: $spacing-2;
+    background-color: papayawhip;
+    border-radius: $rounded-border;
+  }
+  & p:hover {
+    background: darken(papayawhip, 5%);
+  }
+  & a {
+    color: palevioletred;
+    text-decoration: none;
+  }
 }
