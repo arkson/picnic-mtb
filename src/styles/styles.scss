@@ -16,6 +16,11 @@ body
   background-blend-mode: hard-light;
 }
 
+body.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
 h2 {
   font-size: $spacing-7;
   font-weight: 300;
@@ -36,3 +41,7 @@ p, a {
   font-weight: 400;
 }
 
+:global(article.bg-dark), :global(blockquote.bg-dark) {
+  background: $bg-dark;
+  color: white;
+}

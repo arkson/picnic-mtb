@@ -59,13 +59,13 @@ const { frontmatter } = Astro.props;
         margin: 0 0 0.35em;
       }
       :global(h1) {
-        font-size: 40px;
+        font-size: $spacing-10;
       }
       :global(h2) {
-        font-size: 26px;
+        font-size: $spacing-6;
       }
       :global(h3) {
-        font-size: 20px;
+        font-size: $spacing-5;
         font-weight: 400;
         line-height: 1;
         overflow: hidden;
@@ -75,7 +75,7 @@ const { frontmatter } = Astro.props;
         margin: 0 0 1.15em;
         text-align: justify;
         font-weight: 300;
-        font-size: 0.8rem;
+        font-size: $spacing-3;
         line-height: 1.5;
       }
       :global(blockquote) {
@@ -88,7 +88,7 @@ const { frontmatter } = Astro.props;
       }
       :global(blockquote){
         margin: 1rem 0;
-        font-size: 1.4em;
+        font-size: $spacing-5;
         width:60%;
         font-style:italic;
         color: #555555;
