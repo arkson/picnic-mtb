@@ -31,19 +31,27 @@
     return 'light';
   })();
 
+  const elements = document.querySelectorAll('body, article, p, a, blockquote, .about-description');
+
   if (theme !== 'light') {
-    document.body.classList.add('dark');
+    elements.forEach((element) => {
+      element.classList.add('dark');
+    });
   } else {
-    document.body.classList.remove('dark');
+    elements.forEach((element) => {
+      element.classList.remove('dark');
+    });
   }
 
   window.localStorage.setItem('theme', theme);
 
   const handleToggleClick = () => {
-    const element = document.body;
-    element.classList.toggle('dark');
+    const elements = document.querySelectorAll('body, article, p, a, blockquote, .about-description');
+    elements.forEach((element) => {
+      element.classList.toggle('dark');
+    });
 
-    const isDark = element.classList.contains('dark');
+    const isDark = elements[0].classList.contains('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   }
 

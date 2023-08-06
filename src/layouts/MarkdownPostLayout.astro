@@ -31,6 +31,19 @@ const { frontmatter } = Astro.props;
       flex-direction: column;
     }
 
+    :global(article.dark), :global(blockquote.dark), :global(p.dark)  {
+      background: $bg-dark;
+      color: white;
+    }
+
+    :global(.tags p.dark) {
+      background: hsla(257, 31%, 11%, 1);
+    }
+
+    :global(.tags p > a.dark)  {
+      color: #FFBD2E;
+    }
+
     article {
       margin: 0 1.5rem 1.5rem;
       padding: 1rem;
