@@ -1,17 +1,14 @@
 ---
 title: 'Icalma'
 location: 'Lonquimay, 🇨🇱'
-image: {
-  url: '/icalma.png',
-  alt: 'Icalma'
-}
-amenities: ["bed", "outdoor_grill", "local_cafe", "kayaking"]
 pubDate: 2022-07-01
-readTime: "3 min read"
 description: "Mountain Biking in Icalma, Araucanía Region, Chile: Exploring Nature's Thrilling Playground"
 author: 'Arcadio'
-url: 'https://docs.astro.build/assets/full-logo-light.png'
+cover: '../../assets/images/icalma.png'
+coverAlt: 'Icalma'
 tags: ["destination", "south america", "adventure", "araucania", "chile"]
+amenities: ["bed", "outdoor_grill", "local_cafe", "kayaking"]
+readTime: '3 min read'
 ---
 Icalma is a picturesque village surrounded by stunning natural beauty. Located at the eastern edge of the Andes mountain range, the region is characterized by its lush forests, pristine lakes, and awe-inspiring volcanoes. The iconic Lanín Volcano, which straddles the border with Argentina, serves as a constant backdrop to the region's rugged terrain.
 

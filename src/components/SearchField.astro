@@ -1,35 +1,37 @@
 <div class="search-container">
-  <label>Find trails, bike parks or places</label>
-  <input type="text" placeholder="" class="search-field">
-  <button type="submit" class="search-button">
-    <span class="material-symbols-outlined">
-      search
-    </span>
-  </button>
+  <label>
+    Find trails, bike parks or places
+    <input type="text" placeholder="">
+    <button type="submit" class="search-button">
+      <span class="material-symbols-outlined">
+        search
+      </span>
+    </button>
+  </label>
 </div>
 
 <style lang="scss">
   @import "../styles/variables.scss";
 
   .search-container {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin: $spacing-6;
 
     label {
+      display: flex;
       width: 100%;
     }
     input {
       border-top-left-radius: $rounded-border;
       border-bottom-left-radius: $rounded-border;
+      padding: $spacing-2;
+      border: $spacing-px solid $light-gray;
+      width: 80%;
     }
   }
 
   .search-field {
-    flex: 1;
-    padding: $spacing-2;
-    border: $spacing-px solid $light-gray;
+
   }
 
   .search-button {
@@ -39,5 +41,6 @@
     cursor: pointer;
     border-top-right-radius: $rounded-border;
     border-bottom-right-radius: $rounded-border;
+    width: 20%;
   }
 </style>

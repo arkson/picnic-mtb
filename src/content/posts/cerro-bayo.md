@@ -1,17 +1,14 @@
 ---
 title: 'Cerro Bayo'
 location: 'Villa La Angostura, 🇦🇷'
-image: {
-    url: '/villa-angostura.jpeg',
-    alt: 'Villa La Angostura'
-}
-amenities: ["bed", "park", "restaurant", "local_gas_station"]
-author: Arcadio
-description: 'Discovering the Thrills of Nature: Cerro Bayo Bike Park in Patagonia, Argentina'
-url: 'https://docs.astro.build/assets/rays.webp'
 pubDate: 2022-07-15
-readTime: "3 min read"
+description: 'Discovering the Thrills of Nature: Cerro Bayo Bike Park in Patagonia, Argentina'
+author: 'Arcadio'
+cover: '../../assets/images/villa-angostura.jpeg'
+coverAlt: 'Villa La Angostura'
 tags: ["bike park", "destination", "south america", "adventure", "argentina"]
+amenities: ["bed", "park", "restaurant", "local_gas_station"]
+readTime: '3 min read'
 ---
 ### A Natural Wonderland: Patagonia's Unspoiled Beauty
 

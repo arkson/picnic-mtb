@@ -28,7 +28,8 @@ const { posts } = Astro.props;
       <BlogPost
           url={'/posts/' + post.slug}
           title={post.data.title}
-          image={post.data.image}
+          cover={post.data.cover}
+          coverAlt={post.data.coverAlt}
           location={post.data.location}
           amenities={post.data.amenities}
       />

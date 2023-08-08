@@ -3,14 +3,15 @@ import BlogPost from "./BlogPost.astro";
 const { allPosts } = Astro.props;
 ---
 
-<h6>Top rated spots to ride</h6>
+<strong>Top rated spots to ride</strong>
 <div>
   <ul>
   {allPosts.map((post) =>
     <BlogPost
       url={'/posts/' + post.slug}
       title={post.data.title}
-      image={post.data.image}
+      cover={post.data.cover}
+      coverAlt={post.data.coverAlt}
       location={post.data.location}
       amenities={post.data.amenities}
     />
@@ -24,8 +25,11 @@ const { allPosts } = Astro.props;
 <style lang="scss">
   @import "../styles/variables.scss";
 
-  h6 {
-    margin: 1rem 0 0;
+  strong {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: left;
+    padding-left: 1rem;
   }
   div {
     display: flex;

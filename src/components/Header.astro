@@ -1,6 +1,9 @@
+---
+import logo from '../assets/images/logo.svg'
+---
 <header>
   <a href="/">
-    <img alt="logo" class="logo" src="/logo.svg">
+    <img alt="logo" width="90" height="110" class="logo" src={logo.src}>
   </a>
 </header>
 
@@ -8,8 +11,6 @@
   @import "../styles/variables.scss";
 
   img.logo {
-    width: 25%;
-    height: auto;
     padding-top: $spacing-2;
   }
 </style>
