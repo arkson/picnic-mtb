@@ -1,0 +1,168 @@
+
+<strong>Upcoming events</strong>
+<div class="events-container">
+  <div class="event-card">
+    <div class="event-date-box">
+      <span class="event-day">16</span>
+      <span class="event-month">Aug</span>
+    </div>
+    <div class="event-content">
+      <div class="event-title">Mini riders Bike Camp</div>
+      <div class="event-date">
+        <span class="material-symbols-outlined">schedule</span>
+        <span>10:00 AM, Tue 16 Aug</span>
+      </div>
+      <div class="event-location">
+        <span class="material-symbols-outlined">location_on</span>
+        <span>Caracas, Caicaguana sport park</span>
+      </div>
+      <div class="event-link">
+        <a href="#">More info</a>
+      </div>
+    </div>
+  </div>
+  <div class="event-card">
+    <div class="event-date-box">
+      <span class="event-day">5</span>
+      <span class="event-month">Sep</span>
+    </div>
+    <div class="event-content">
+      <div class="event-title">Event 2</div>
+      <div class="event-date">
+        <span class="material-symbols-outlined">schedule</span>
+        <span>2:00 AM, Tue 5 Sep</span>
+      </div>
+      <div class="event-location">
+        <span class="material-symbols-outlined">location_on</span>
+        <span>Corner Cross and Hocking St West Footscray</span>
+      </div>
+      <div class="event-link">
+        <a href="#">More info</a>
+      </div>
+    </div>
+  </div>
+  <div class="event-card">
+    <div class="event-date-box">
+      <span class="event-day">20</span>
+      <span class="event-month">Oct</span>
+    </div>
+    <div class="event-content">
+      <div class="event-title">Event 3</div>
+      <div class="event-date">
+        <span class="material-symbols-outlined">schedule</span>
+        <span>6:00 PM, Tue 20 Oct</span>
+      </div>
+      <div class="event-location">
+        <span class="material-symbols-outlined">location_on</span>
+        <span>Corner Cross and Hocking St West Footscray</span>
+      </div>
+      <div class="event-link">
+        <a href="#">More info</a>
+      </div>
+    </div>
+  </div>
+  <div class="more-events">
+    <a href="#">
+      More events
+    </a>
+  </div>
+</div>
+
+<style lang="scss">
+    @import "../styles/variables.scss";
+
+    .events-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: $spacing-6;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .event-card {
+        background: #f9f9f9;
+        opacity: 0.92;
+        border: 1px solid #ddd;
+        padding: $spacing-5;
+        box-sizing: border-box;
+        display: flex;
+        &:first-child {
+           border-top-left-radius: 4px;
+           border-top-right-radius: 4px;
+         }
+        .event-date-box {
+          background-color: $cyan;
+          color: white;
+          height: 3rem;
+          display: flex;
+          flex-direction: column;
+          align-self: center;
+          margin-right: 1rem;
+          border-radius: 0.5rem;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          .event-day {
+            font-size: $spacing-6;
+          }
+          .event-month {
+            font-size: $spacing-4;
+          }
+        }
+
+        .event-content {
+          display: flex;
+          flex-direction: column;
+          .event-title {
+            font-size: $spacing-5;
+            font-weight: 300;
+            text-align: left;
+            margin-bottom: 10px;
+            color: $cyan;
+          }
+          .event-date span:last-child, .event-location span:last-child {
+            vertical-align: super;
+          }
+          .event-date, .event-location {
+            font-size: $spacing-3;
+            text-align: left;
+            color: $light-text-color;
+          }
+          .event-link {
+            text-align: left;
+            a {
+              text-decoration: none;
+              color: $cyan;
+              font-size: $spacing-3;
+            }
+          }
+        }
+      }
+
+      .more-events {
+        background: #f9f9f9;
+        opacity: 0.92;
+        padding: $spacing-4;
+        width: 100%;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        & a {
+          color: $light-text-color;
+          text-decoration: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .event-card {
+          width: calc(50% - 20px);
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .event-card {
+          width: 100%;
+      }
+      .event-date-box {
+          flex: 0 0 80px;
+          padding: 8px;
+      }
+    }
+</style>
