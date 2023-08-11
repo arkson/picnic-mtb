@@ -4,6 +4,7 @@ import SearchField from '../components/SearchField.astro';
 import TopRatedSpots from '../components/TopRatedSpots.astro';
 import { getCollection } from "astro:content";
 import { HOME_PAGE_TITLE, HOME_PAGE_DESCRIPTION, HOME_PAGE_SUBTITLE } from '../constants';
+import EventsSection from "../components/EventsSection.astro";
 
 const allPosts = await getCollection("posts");
 ---
@@ -14,5 +15,6 @@ const allPosts = await getCollection("posts");
     {HOME_PAGE_SUBTITLE}
   </p>
   <SearchField />
+  <EventsSection />
   <TopRatedSpots allPosts={allPosts} />
 </BaseLayout>

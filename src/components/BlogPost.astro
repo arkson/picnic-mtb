@@ -21,7 +21,6 @@ const { url, cover, coverAlt, title, location, amenities } = Astro.props;
 <style lang="scss">
   @import "../styles/variables.scss";
   li {
-    border-radius: $rounded-border;
     opacity: $bg-transparency;
   }
   a {
@@ -29,8 +28,6 @@ const { url, cover, coverAlt, title, location, amenities } = Astro.props;
     flex-direction: column;
     text-decoration: none;
     background-color: $white;
-    margin-bottom: $spacing-4;
-    border-radius: 0 0 4px 4px;
 
     & div {
       display: flex;
@@ -38,14 +35,14 @@ const { url, cover, coverAlt, title, location, amenities } = Astro.props;
       padding: $spacing-0 $spacing-4;
       font-size: $spacing-4;
       text-align: left;
-      color: $dark-gray;
+      color: $light-text-color;
 
       :is(p) {
           padding: $spacing-0;
       }
 
       :is(span) {
-          color: $dark-gray;
+          color: $light-text-color;
           align-self: center;
       }
     }
@@ -63,6 +60,6 @@ const { url, cover, coverAlt, title, location, amenities } = Astro.props;
     font-size: $spacing-5;
     text-align: left;
     padding-left: $spacing-4;
-    color: $dark-gray;
+    color: $light-text-color;
   }
 </style>
