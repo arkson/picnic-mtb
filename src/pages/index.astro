@@ -7,6 +7,7 @@ import { HOME_PAGE_TITLE, HOME_PAGE_DESCRIPTION, HOME_PAGE_SUBTITLE } from '../c
 import EventsSection from "../components/EventsSection.astro";
 
 const allPosts = await getCollection("posts");
+const allEvents = await getCollection("events");
 ---
 
 <BaseLayout pageTitle={HOME_PAGE_TITLE}>
@@ -15,6 +16,6 @@ const allPosts = await getCollection("posts");
     {HOME_PAGE_SUBTITLE}
   </p>
   <SearchField />
-  <EventsSection />
+  <EventsSection allEvents={allEvents} />
   <TopRatedSpots allPosts={allPosts} />
 </BaseLayout>

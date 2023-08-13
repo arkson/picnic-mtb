@@ -16,7 +16,18 @@ const postsCollection = defineCollection({
     readTime: z.string(),
   })
 });
-// Export a single `collections` object to register your collection(s)
+
+const eventsCollection = defineCollection({
+  type: 'content',
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    location: z.string(),
+    pubDate: z.date(),
+    cover: image(),
+  })
+});
+
 export const collections = {
   posts: postsCollection,
+  events: eventsCollection,
 };

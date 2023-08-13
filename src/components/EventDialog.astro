@@ -1,0 +1,93 @@
+---
+import { Image } from 'astro:assets';
+const { cover, index, title, event } = Astro.props;
+const { Content } = await event.render();
+---
+<dialog id=`content-dialog-${index}`>
+  <form method="dialog">
+    <div class="dialog-content">
+      <h6>{title}</h6>
+      <Image src={cover} alt={title} />
+      <Content />
+    </div>
+    <button id=`cancel-dialog-${index}` type="reset">Close</button>
+  </form>
+</dialog>
+
+<script>
+ (function () {
+  const events = document.querySelectorAll("#dialog-0, #dialog-1, #dialog-2");
+
+  events.forEach(item => {
+   item.addEventListener('click', event => {
+    const partialId = event.target.id;
+    const dialog = document.getElementById(`content-${partialId}`);
+    const cancelButton = document.getElementById(`cancel-${partialId}`);
+
+    dialog.showModal();
+
+    cancelButton.addEventListener('click', function () {
+     dialog.close();
+    });
+
+    dialog.addEventListener("click", e => {
+     const dialogDimensions = dialog.getBoundingClientRect()
+     if (
+       e.clientX < dialogDimensions.left ||
+       e.clientX > dialogDimensions.right ||
+       e.clientY < dialogDimensions.top ||
+       e.clientY > dialogDimensions.bottom
+     ) {
+      dialog.close()
+     }
+    })
+   })
+  })
+ })();
+</script>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+  dialog {
+    background: #f9f9f9;
+    border: none !important;
+    border-radius: calc($rounded-border * 3);
+    padding: $spacing-6;
+    max-width: 400px;
+    & img {
+      display: block;
+      max-width: 90%;
+      height: 300px;
+      margin: 0 $spacing-4;
+      border-radius: $rounded-border;
+    }
+    & h6 {
+      color: $cyan;
+      padding: 0;
+      text-align: center;
+    }
+    & :global(p) {
+      font-size: $spacing-3;
+      text-align: center;
+      color: $light-text-color;
+    }
+    & :global(a) {
+      color: $cyan;
+      text-decoration: none;
+    }
+  }
+  dialog::backdrop {
+    background: $light-text-color;
+    opacity: 0.8;
+  }
+  button {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: $cyan;
+    border: none;
+    color: white;
+    padding: $spacing-3 $spacing-8;
+    font-size: $spacing-3;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+</style>
