@@ -58,7 +58,7 @@ const { Content } = await event.render();
       display: block;
       max-width: 90%;
       height: 300px;
-      margin: 0 $spacing-4;
+      margin: 0 $spacing-4 $spacing-2 $spacing-4;
       border-radius: $rounded-border;
     }
     & h6 {
@@ -68,7 +68,10 @@ const { Content } = await event.render();
     }
     & :global(p) {
       font-size: $spacing-3;
+      font-weight: 300;
+      line-height: 1.5;
       text-align: center;
+      margin: 0 0 1.15em;
       color: $light-text-color;
     }
     & :global(a) {
@@ -78,7 +81,7 @@ const { Content } = await event.render();
   }
   dialog::backdrop {
     background: $light-text-color;
-    opacity: 0.8;
+    opacity: 0.9;
   }
   button {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

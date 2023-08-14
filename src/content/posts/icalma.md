@@ -5,7 +5,7 @@ pubDate: 2022-07-01
 description: "Mountain Biking in Icalma, Araucanía Region, Chile: Exploring Nature's Thrilling Playground"
 author: 'Arcadio'
 cover: '../../assets/images/icalma.png'
-coverAlt: 'Icalma'
+coverAlt: 'picnicmtb'
 tags: ["destination", "south america", "adventure", "araucania", "chile"]
 amenities: ["bed", "outdoor_grill", "local_cafe", "kayaking"]
 readTime: '3 min read'

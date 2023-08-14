@@ -3,7 +3,7 @@ title: 'Bikepark Nevados de Chillán'
 location: 'Pinto, 🇨🇱'
 pubDate: 2022-07-08
 description: 'Nevados de Chillan Bike Park: The Ultimate Mountain Biking Paradise'
-author: 'Arcadio'
+author: 'picnicmtb'
 cover: '../../assets/images/chillan.jpeg'
 coverAlt: 'Nevados de Chillan'
 tags: ["bike park", "destination", "south america", "adventure", "chile"]

@@ -24,7 +24,7 @@ h2 {
   font-size: $spacing-7;
   font-weight: 300;
   line-height: $spacing-8;
-  padding: $spacing-2 $spacing-4 $spacing-0;
+  padding: $spacing-0 $spacing-6 $spacing-0;
 }
 
 h6 {
@@ -40,3 +40,6 @@ p, a {
   font-weight: 400;
 }
 
+.page-subtitle {
+  margin: 0;
+}

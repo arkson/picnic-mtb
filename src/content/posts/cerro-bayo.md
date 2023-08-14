@@ -3,7 +3,7 @@ title: 'Cerro Bayo'
 location: 'Villa La Angostura, 🇦🇷'
 pubDate: 2022-07-15
 description: 'Discovering the Thrills of Nature: Cerro Bayo Bike Park in Patagonia, Argentina'
-author: 'Arcadio'
+author: 'picnicmtb'
 cover: '../../assets/images/villa-angostura.jpeg'
 coverAlt: 'Villa La Angostura'
 tags: ["bike park", "destination", "south america", "adventure", "argentina"]
