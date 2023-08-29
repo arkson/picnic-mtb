@@ -1,16 +1,37 @@
 ---
+import Navigation from './Navigation.astro';
 import logo from '../assets/images/logo.svg'
 ---
 <header>
-  <a href="/">
-    <img alt="logo" width="90" height="100" class="logo" src={logo.src}>
-  </a>
+  <section class="top-nav">
+    <div class="logo">
+      <a href="/">
+        <img alt="logo" width="90" height="100" src={logo.src}>
+      </a>
+    </div>
+    <Navigation />
+  </section>
 </header>
 
 <style lang="scss">
   @import "../styles/variables.scss";
 
-  img.logo {
-    padding-top: $spacing-2;
+  .top-nav {
+    display: flex;
+    flex-direction: row;
+    color: white;
+  }
+  .logo {
+    flex: 1;
+
+    img {
+      padding-top: $spacing-2;
+    }
+  }
+  @media (max-width: 700px) {
+    .logo {
+      position: relative;
+      left: 8%;
+    }
   }
 </style>

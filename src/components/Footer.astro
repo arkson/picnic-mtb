@@ -2,27 +2,7 @@
 import ThemeIcon from "./ThemeIcon.astro";
 ---
 <footer>
-  <a href="/about/">About</a>
-  <a href="/contact/">Contact</a>
-  <div class="language-container">
-    <button>
-      <span>EN</span>
-      <img
-          src="https://flagcdn.com/us.svg"
-          width="30"
-          height="20"
-          alt="Usa">
-    </button>
-    <button>
-      <span>ES</span>
-      <img
-          src="https://flagcdn.com/es.svg"
-          width="30"
-          height="20"
-          alt="Spain">
-    </button>
-  </div>
-  <ThemeIcon />
+
 </footer>
 
 <style lang="scss">
@@ -45,23 +25,6 @@ import ThemeIcon from "./ThemeIcon.astro";
     :link {
       text-decoration: none;
       color: $white;
-    }
-
-    .language-container {
-      display: flex;
-      flex-direction: row;
-
-      :is(button) {
-        display: flex;
-        flex-flow: row-reverse;
-        background: none;
-        border: none;
-        align-items: center;
-      }
-      :is(span) {
-        color: $white;
-        font-weight: 600;
-      }
     }
   }
 </style>
