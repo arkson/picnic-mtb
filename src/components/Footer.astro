@@ -1,8 +1,11 @@
 ---
-import ThemeIcon from "./ThemeIcon.astro";
+import Social from "./Social.astro";
+import instagram from "../assets/images/instagram.png";
+import youtube from "../assets/images/youtube.png";
 ---
 <footer>
-
+  <Social platform="instagram" username="picnicmtb" url={instagram} />
+  <Social platform="youtube" username="@picnicmtb" url={youtube} />
 </footer>
 
 <style lang="scss">
@@ -12,19 +15,9 @@ import ThemeIcon from "./ThemeIcon.astro";
     min-height: $spacing-12;
     flex-shrink: $spacing-0;
     display: flex;
+    gap: $spacing-4;
     justify-content: center;
     align-items: center;
     color: $white;
-
-    :is(a) {
-      padding: $spacing-0 $spacing-6;
-    }
-    :visited {
-      color: $white;
-    }
-    :link {
-      text-decoration: none;
-      color: $white;
-    }
   }
 </style>
