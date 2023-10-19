@@ -34,4 +34,17 @@ import logo from '../assets/images/logo.svg'
       left: 8%;
     }
   }
+
+  header {
+    container: header / inline-size;
+  }
+
+  @container header (width > 700px) {
+    .top-nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
+
 </style>

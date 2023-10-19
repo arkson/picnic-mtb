@@ -43,3 +43,14 @@ p, a {
 .page-subtitle {
   margin: 0;
 }
+
+main {
+  container: main / inline-size;
+}
+
+@container main (width > 700px) {
+  .search-container {
+    width: 60cqw;
+    align-self: center;
+  }
+}
