@@ -4,7 +4,7 @@ const { allPosts } = Astro.props;
 ---
 
 <strong>Top rated spots to ride</strong>
-<div>
+<div class="rated-spots">
   <ul>
   {allPosts.map((post) =>
     <BlogPost
@@ -17,18 +17,20 @@ const { allPosts } = Astro.props;
     />
   )}
   </ul>
-  <a href="/tags/">
-    More spots
-  </a>
+  <div class="more-spots">
+    <a href="/tags/">
+      More spots
+    </a>
+  </div>
 </div>
 
 <style lang="scss">
   @import "../styles/variables.scss";
 
-  div {
+  .rated-spots {
     display: flex;
     flex-direction: column;
-    margin: $spacing-6;
+    margin: $spacing-6 $spacing-6 $spacing-12;
 
     & ul {
       list-style: none;
@@ -36,14 +38,19 @@ const { allPosts } = Astro.props;
       margin: 0;
     }
 
-    & a {
-      color: $light-text-color;
-      text-decoration: none;
-      background: #f9f9f9;
-      opacity: 0.92;
-      padding: $spacing-4;
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
-    }
+    & .more-spots {
+      display: flex;
+
+      & a {
+        color: $light-text-color;
+        text-decoration: none;
+        background: #f9f9f9;
+        opacity: 0.92;
+        padding: $spacing-4;
+        border-bottom-left-radius: $rounded-border;
+        border-bottom-right-radius: $rounded-border;
+        width: 100%;
+      }
+      }
   }
 </style>

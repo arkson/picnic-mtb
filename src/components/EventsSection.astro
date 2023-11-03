@@ -3,9 +3,9 @@ import EventDialog from "./EventDialog.astro";
 const { allEvents } = Astro.props;
 ---
 <strong>Upcoming events</strong>
-<div class="events-container">
+<ul class="events-container">
   {allEvents.map((event, index) =>
-    <div class="event-card">
+    <li class="event-card">
       <div class="event-date-box">
         <span class="event-day">{event.data.pubDate.getDate()}</span>
         <span class="event-month">{event.data.pubDate.toLocaleString('en-US', { month: 'short' })}</span>
@@ -24,7 +24,7 @@ const { allEvents } = Astro.props;
           <a id=`dialog-${index}`>More info</a>
         </div>
       </div>
-    </div>
+    </li>
     <EventDialog
       title={event.data.title}
       cover={event.data.cover}
@@ -32,25 +32,24 @@ const { allEvents } = Astro.props;
       event={event}
     />
   )}
-  <div class="more-events">
-    <a href="#">
-      More events
-    </a>
-  </div>
+</ul>
+<div class="more-events">
+  <a href="#">
+    More events
+  </a>
 </div>
 
 <style lang="scss">
     @import "../styles/variables.scss";
 
     .events-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: $spacing-6;
+      margin: $spacing-6 $spacing-6 0;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      padding: 0;
 
       .event-card {
+        width: 100%;
         background: #f9f9f9;
         opacity: 0.92;
         border: 1px solid #ddd;
@@ -70,6 +69,8 @@ const { allEvents } = Astro.props;
           align-self: center;
           margin-right: 1rem;
           border-radius: 0.5rem;
+          flex: 0 0 80px;
+          padding: 8px;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
           .event-day {
             font-size: $spacing-6;
@@ -98,6 +99,7 @@ const { allEvents } = Astro.props;
           }
           .event-link {
             text-align: left;
+            cursor: pointer;
             a {
               text-decoration: none;
               color: $cyan;
@@ -106,33 +108,18 @@ const { allEvents } = Astro.props;
           }
         }
       }
-
-      .more-events {
-        background: #f9f9f9;
-        opacity: 0.92;
-        padding: $spacing-4;
-        width: 100%;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-        & a {
-          color: $light-text-color;
-          text-decoration: none;
-        }
-      }
     }
 
-    @media screen and (max-width: 768px) {
-      .event-card {
-          width: calc(50% - 20px);
-      }
-    }
-    @media screen and (max-width: 480px) {
-      .event-card {
-          width: 100%;
-      }
-      .event-date-box {
-          flex: 0 0 80px;
-          padding: 8px;
+    .more-events {
+      background: #f9f9f9;
+      opacity: 0.92;
+      padding: $spacing-4;
+      margin: 0 $spacing-6 $spacing-6;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      & a {
+        color: $light-text-color;
+        text-decoration: none;
       }
     }
 </style>

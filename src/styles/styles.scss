@@ -48,9 +48,73 @@ main {
   container: main / inline-size;
 }
 
-@container main (width > 700px) {
+@container main (width >= 700px) {
   .search-container {
     width: 60cqw;
     align-self: center;
+  }
+  .rated-spots {
+    margin: 2rem 4rem!important;
+
+    ul {
+      display: flex;
+      gap: 2.5rem;
+    }
+    li {
+      flex-grow: 1;
+      flex-basis: calc(100% / 3);
+    }
+    li a {
+      border-radius: $rounded-border;
+    }
+    li a img {
+      border-top-left-radius: $rounded-border;
+      border-top-right-radius: $rounded-border;
+    }
+    .more-spots {
+      width: clamp(100px, 50%, 217px);
+      margin-top: 2rem;
+      align-self: center;
+      a {
+        border-radius: $rounded-border;
+      }
+    }
+  }
+
+  .events-container {
+    display: flex;
+    gap: 2.5rem;
+    margin: 2rem 4rem!important;
+
+    .event-card {
+      flex: 1;
+      height: 225px;
+      border-radius: $rounded-border;
+    }
+  }
+
+  .more-events {
+    width: clamp(100px, 50%, 185px);
+    border-radius: $rounded-border;
+    align-self: center;
+  }
+
+  h2 {
+    max-width: 700px;
+    align-self: center;
+  }
+  strong {
+    align-self: center;
+    margin-top: $spacing-8;
+  }
+}
+
+@container main (width >= 700px) and (width < 1024px) {
+  .search-container {
+    width: 60cqw;
+    align-self: center;
+  }
+  h2 {
+    max-width: 680px;
   }
 }
