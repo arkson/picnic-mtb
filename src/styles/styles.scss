@@ -7,17 +7,17 @@ body
 {
   margin: $spacing-0;
   font-family: "Poppins", sans-serif;
-  background-color: $dark-cyan;
+  background-color: $cyan;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
-  background-blend-mode: hard-light;
 }
 
 body.dark {
   background-color: #0d0950;
   color: #fff;
+  opacity: 0.9;
 }
 
 h2 {
