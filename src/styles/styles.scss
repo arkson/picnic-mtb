@@ -70,6 +70,7 @@ main {
     li a img {
       border-top-left-radius: $rounded-border;
       border-top-right-radius: $rounded-border;
+      height: 200px;
     }
     .more-spots {
       width: clamp(100px, 50%, 217px);
