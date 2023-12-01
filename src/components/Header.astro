@@ -15,7 +15,9 @@ import logo from '../assets/images/logo.svg'
 
 <style lang="scss">
   @import "../styles/variables.scss";
-
+  header {
+    container: header / inline-size;
+  }
   .top-nav {
     display: flex;
     flex-direction: row;
@@ -29,14 +31,13 @@ import logo from '../assets/images/logo.svg'
     }
   }
   @media (max-width: 700px) {
+    header {
+      container: inline-size;
+    }
     .logo {
       position: relative;
       left: 8%;
     }
-  }
-
-  header {
-    container: header / inline-size;
   }
 
   @container header (width > 700px) {

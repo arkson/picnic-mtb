@@ -8,16 +8,21 @@
 </button>
 
 <style>
-    #themeToggle {
-        border: 0;
-        background: none;
-    }
-    .sun { fill: #0bbbef; }
-    .moon { fill: transparent; }
+  #themeToggle {
+      border: 0;
+      background: none;
+  }
+  .sun { fill: #111111; }
+  .moon { fill: transparent; }
 
 
-    :global(.dark) .sun { fill: transparent; }
-    :global(.dark) .moon { fill: #0bbbef; }
+  :global(.dark) .sun { fill: transparent; }
+  :global(.dark) .moon { fill: #111111; }
+
+  @media (max-width: 700px) {
+    .sun { fill: #ffffff; }
+    :global(.dark) .moon { fill: #ffffff; }
+  }
 </style>
 
 <script src="../utilities/theme.js"></script>

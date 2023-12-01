@@ -46,11 +46,11 @@ import ThemeIcon from "./ThemeIcon.astro";
     display: flex;
   }
   :visited {
-    color: $cyan;
+    color: $dark-gray;
   }
   :link {
     text-decoration: none;
-    color: $cyan;
+    color: $dark-gray;
   }
 
   .hamburger {
@@ -163,18 +163,25 @@ import ThemeIcon from "./ThemeIcon.astro";
     .menu > li:not(:last-child) {
       border-bottom: 1px solid #444;
     }
+    :visited {
+      color: $white;
+    }
+    :link {
+      text-decoration: none;
+      color: $white;
+    }
   }
 
   .language-container {
     display: flex;
     flex-direction: row;
 
-  :is(button) {
-    display: flex;
-    flex-flow: row-reverse;
-    background: none;
-    border: none;
-    align-items: center;
-  }
+    :is(button) {
+      display: flex;
+      flex-flow: row-reverse;
+      background: none;
+      border: none;
+      align-items: center;
+    }
   }
 </style>
