@@ -3,7 +3,7 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   row-gap: $spacing-2;
 
   & p {
@@ -19,5 +19,6 @@
   & a {
     color: palevioletred;
     text-decoration: none;
+    text-transform: uppercase;
   }
 }

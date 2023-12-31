@@ -22,19 +22,21 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag}>
-  <p>Spots found with <b>{tag}</b></p>
-  <ul>
-    {posts.map((post) =>
-      <BlogPost
-          url={'/posts/' + post.slug}
-          title={post.data.title}
-          cover={post.data.cover}
-          coverAlt={post.data.coverAlt}
-          location={post.data.location}
-          amenities={post.data.amenities}
-      />
-    )}
-  </ul>
+  <strong>Spots found with <b>{tag}</b></strong>
+  <div class="rated-spots">
+    <ul>
+      {posts.map((post) =>
+        <BlogPost
+            url={'/posts/' + post.slug}
+            title={post.data.title}
+            cover={post.data.cover}
+            coverAlt={post.data.coverAlt}
+            location={post.data.location}
+            amenities={post.data.amenities}
+        />
+      )}
+    </ul>
+  </div>
 </BaseLayout>
 
 <style lang="scss">
@@ -43,6 +45,6 @@ const { posts } = Astro.props;
   ul {
     list-style: none;
     padding: 0;
-    margin: $spacing-6;
+    margin: $spacing-6 $spacing-6 $spacing-12;
   }
 </style>
