@@ -58,9 +58,9 @@ main {
     ul {
       display: flex;
       gap: 2.5rem;
+      justify-content: center;
     }
     li {
-      flex-grow: 1;
       flex-basis: calc(100% / 3);
     }
     li a {
